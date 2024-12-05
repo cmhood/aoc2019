@@ -16,7 +16,7 @@ main(void)
 
 	char c = ',';
 	for (int i = 0; c == ','; ++i) {
-		if (i >= 256 || scanf("%d%c", &program[i], &c) != 2) {
+		if (i >= 256 || scanf("%" PRIu32 "%c", &program[i], &c) != 2) {
 			fprintf(stderr, "parse error\n");
 			exit(EXIT_FAILURE);
 		}
